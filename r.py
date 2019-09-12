@@ -18,10 +18,7 @@ for d in data:
 print('留言平均长度为:', sum_len/len(data))
 print('其中长度小于100的留言有', len(new), '笔。')
 
-good = []
-for d in data:
-    if 'good' in d:
-        good.append(d)
+good = [d for d in data if 'good' in d]
 print('提到good的留言有', len(good), '笔。')
 print('例如:', good[0])
 
